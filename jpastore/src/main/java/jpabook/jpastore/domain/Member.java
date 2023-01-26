@@ -1,13 +1,10 @@
 package jpabook.jpastore.domain;
-
-// import jpabook.jpastore.domain.Address;
+import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-// import jpabook.jpastore.domain.Order;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -29,5 +26,5 @@ public class Member {
 
     @OneToMany(mappedBy = "member")
     //  order가 주인. Order객체의 members 필드를 이용
-    private List<Order> orders;
+    private List<Order> orders = new ArrayList<>();
 }
