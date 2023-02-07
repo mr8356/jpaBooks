@@ -47,5 +47,6 @@ public class Item {
         if (quantity > this.stockQuantity) {
             throw new NotEnoughStockException("need more stock");
         }
+        this.stockQuantity -= quantity;
     }
 }
