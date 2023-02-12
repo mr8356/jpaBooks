@@ -4,15 +4,14 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
+// import org.springframework.validation.BindingResult;
+// import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import jpabook.jpastore.domain.Address;
 import jpabook.jpastore.domain.Member;
 import jpabook.jpastore.service.MemberService;
-import jpabook.jpastore.web.MemberForm;
 import lombok.RequiredArgsConstructor;
 
 
