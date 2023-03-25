@@ -14,4 +14,8 @@ public class HomeController {
         return "home";
     }
     
+    @GetMapping("/mvc2")
+    public String mvc2_home() {
+        return "home";
+    }
 }
