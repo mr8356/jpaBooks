@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import jpabook.jpastore.domain.Address;
 import jpabook.jpastore.domain.Member;
 import jpabook.jpastore.service.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +18,16 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MemberController {
     private final MemberService memberService;
+
+    @GetMapping("/test")
+    public String test(){
+        Member member = new Member();
+        member.setLoginId("test");
+        member.setPassword("test1");
+        member.setName("test");
+        memberService.join(member);
+        return "redirect:/";
+    }
 
     @GetMapping(value = "/members/new")
     public String createForm(Model model) {
@@ -36,8 +45,6 @@ public class MemberController {
         
         Member member = new Member();
         member.setName(form.getName());
-        Address address = new Address(form.getCity(), form.getStreet(), form.getZipcode());
-        member.setAddress(address);
         memberService.join(member); 
         return "redirect:/";
     }

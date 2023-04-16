@@ -39,10 +39,6 @@ public class Order {
      * 보통 order 추가할때 member.getOrders().add(order); order.setMember(member); 하지만,
      * 아래로 오버로딩해주면 order.setMember(order) 하면 끝남. === 보통 member가 order를 추가하므로. 없어도 되지만 있으면 더 편함 
      */
-    public void setMember(Member member){
-        this.member = member;
-        member.getOrders().add(this);
-    }
     public void addOrderItem(OrderItem orderItem) {
         this.orderItems.add(orderItem);
         orderItem.setOrder(this);
