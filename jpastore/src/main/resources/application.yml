@@ -21,3 +21,7 @@ spring:
                 show_sql: true
                 format_sql: true
 
+server:
+    servlet:
+        session:
+            tracking-modes: cookie
