@@ -37,8 +37,7 @@ public class LoginController {
             BindingResult bindingResult,
             HttpServletRequest request,
             HttpServletResponse response,
-            @RequestParam(defaultValue = "/") String redirectURL)
-            {
+            @RequestParam(defaultValue = "/") String redirectURL) {
         if (bindingResult.hasErrors()) {
             return "login/loginForm";
         } // 폼 부족하게 입력
